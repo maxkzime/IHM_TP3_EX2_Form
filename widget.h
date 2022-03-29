@@ -21,8 +21,11 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-    Person * itsPerson;
 
+    Person itsPerson;
+
+private:
+    Ui::IHM *ui;
 
 //public slots:
 //    void onEditName(QString aName);
@@ -34,7 +37,5 @@ private slots:
     void on_leFirstname_textEdited(const QString &arg1);
     void on_cwBirthdate_clicked(const QDate &date);
 
-private:
-    Ui::IHM *ui;
 };
 #endif // WIDGET_H

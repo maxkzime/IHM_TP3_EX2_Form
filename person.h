@@ -18,10 +18,9 @@ private:
 
 public:
     Person();
-    void setName(QString aName);
-    void setFirstname(QString aFirstname);
-    void setDate(QDate aDate);
-
+    void setItsName(const QString &newItsName);
+    void setItsFirstname(const QString &newItsFirstname);
+    void setItsDate(const QDate &newItsDate);
 };
 
 #endif // PERSON_H

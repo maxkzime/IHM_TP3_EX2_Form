@@ -15,30 +15,29 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
 }
 
+
 Widget::~Widget()
-{
-    delete ui;
-    delete itsPerson;
-}
+{delete ui;}
+
 
 void Widget::on_leName_textEdited(const QString &arg1)
 {
-    this->itsPerson->setName(arg1);
+    itsPerson.setItsName(arg1);
     ui->printName->setText(arg1);
 }
 
 
 void Widget::on_leFirstname_textEdited(const QString &arg1)
 {
-    this->itsPerson->setFirstname(arg1);
+    itsPerson.setItsFirstname(arg1);
     ui->printFirstname->setText(arg1);
 }
 
 
 void Widget::on_cwBirthdate_clicked(const QDate &date)
 {
-    this->itsPerson->setDate(date);
-    ui->printBirthdate->setText(date.toString("dd.MM.yyyy"));
+    itsPerson.setItsDate(date);
+    ui->printBirthdate->setText(date.toString("dd MMMM yyyy"));
 }
 
 
